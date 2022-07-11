@@ -1,0 +1,13 @@
+body {
+    font-family : arial;
+}
+
+h3  {
+    color: indigo;
+    font-family: verdana, arial, sans-serif;
+}
+
+p   {
+    font-family: georgia;
+    max-width: 50%;
+}
