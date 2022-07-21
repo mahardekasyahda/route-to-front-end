@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap');
+
+* {
+       padding: 0;
+       margin: 0;
+}
+
+body {
+       font-family: 'Montserrat', sans-serif;
+       overflow-x: hidden;
+}
+
+/* navbar */
+nav {
+       display: flex;
+       background-color: rgb(110, 58, 148);
+       justify-content: space-around;
+       height: 55px;
+       align-items: center;
+       color: rgb(244, 210, 255);
+}
+
+nav .logo {
+       font-family: 'Pacifico', cursive;
+       font-size: 20px;
+       letter-spacing: 2px;
+}
+
+nav ul {
+       display: flex;
+       list-style-type: none;
+       width: 40%;
+       justify-content: space-between;
+}
+
+nav ul li a {
+       color: rgb(244, 210, 255);
+       text-decoration: none;
+       font-size: 0.8em;
+}
+
+nav ul li a:hover {
+       color: rgb(253, 246, 255);
+}
+
+/* hambureger */
+
+.menu-toggle {
+       display: none;
+       flex-direction: column;
+       height: 20px;
+       justify-content: space-between;
+       position: relative;
+}
+
+.menu-toggle input {
+       position: absolute;
+       width: 40px;
+       height: 27px;
+       opacity: 0;
+       left: -6px;
+       top: -3px;
+       cursor: pointer;
+       z-index: 1;
+}
+
+.menu-toggle span {
+       display: block;
+       width: 28px;
+       height: 3px;
+       background-color: rgb(244, 210, 255);
+       border-radius: 3px;
+       transition: all 0.5s;
+}
+
+/* hamburger animation */
+.menu-toggle span:nth-child(2) {
+       transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+       transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+       background-color: white;
+       transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+       opacity: 0;
+       transform: scale(0);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+       background-color: white;
+       transform: rotate(-45deg) translate(-1px, 0);
+}
+
+
+/* responsive */
+
+/* tablet */
+@media screen and (max-width: 768px) {
+       nav ul {
+              width: 50%;
+       }
+}
+
+/* mobile */
+
+@media screen and (max-width: 576px) {
+       nav ul {
+              background-color: rgba(154, 92, 199, 0.959);
+              position: absolute;
+              top: 0;
+              height: 100vh;
+              justify-content: space-evenly;
+              align-items: center;
+              z-index: -1;
+              right: 0;
+              flex-direction: column;
+              transform: translateX(100%);
+              transition: all 1s;
+              opacity: 0;
+
+       }
+
+       nav ul.slide {
+              transform: translateX(0);
+              opacity: 1;
+       }
+
+       .menu-toggle {
+              display: flex;
+       }
+}

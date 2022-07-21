@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Lear GRID | Justify,align Items content</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 120px 180px 120px;
+        grid-template-rows: 80px 80px;
+        gap: 5px;
+        background-color: red;
+        /* justify-items: start; */
+        /* justify-items: end; */
+        /* justify-items: stretch; bekerja jika tidak ada width nya*/
+        /* justify-items: center; */
+
+        /* align-items: center; */
+        /* align-items: start; */
+        /* align-items: end; */
+        /* align-items: stretch; bekerja jika tidak ada height nya*/
+
+        /* place items short hand align dan justify items */
+        /* place-items: <align> <justify>; */
+        /* place-items: center center; */
+
+        /* justify content bekerja jika content lebih kecil dari kontainer nya dan ukuran fix (px)*/
+        /* justify-content: start; */
+        /* justify-content: center; */
+        /* justify-content: end; */
+        /* justify-content: stretch; */
+        /* justify-content: space-around; */
+        /* justify-content: space-between; */
+        /* justify-content: space-evenly; */
+
+        /* align content bekerja jika content lebih kecil dari kontainer nya dan ukuran fix (px)*/
+        /* align-content: start; */
+        /* align-content: center; */
+        /* align-content: end; */
+        /* align-content: stretch; */
+        /* align-content: space-around; */
+        /* align-content: space-between; */
+        /* align-content: space-evenly; */
+
+        /* place content short hand align dan justify content */
+        /* place-content: <align> <justify>; */
+        /* place-content: center center; */
+      }
+
+      .items {
+        border: 3px solid black;
+        height: 100px;
+        width: 100px;
+        background-color: lightblue;
+      }
+
+      .items.i1,
+      .items.i4,
+      .items.i7 {
+        /* width: 130px; */
+      }
+      .items.i2,
+      .items.i5,
+      .items.i8 {
+        /* width: 80px; */
+      }
+      .items.i3,
+      .items.i6,
+      .items.i9 {
+        /* width: 170px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items i1">1</div>
+      <div class="items i2">2</div>
+      <div class="items i3">3</div>
+      <div class="items i4">4</div>
+      <div class="items i5">5</div>
+      <div class="items i6">6</div>
+      <div class="items i7">7</div>
+      <div class="items i8">8</div>
+      <div class="items i9">9</div>
+    </div>
+  </body>
+</html>
